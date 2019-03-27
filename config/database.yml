@@ -1,0 +1,18 @@
+default: &default
+  timeout: 5000
+  pool: 5
+  encoding: unicode
+  adapter: postgresql
+
+development:
+  <<: *default
+  adapter: postgresql
+  database: job_test_dev
+  username: ice
+  password: "ice123"
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: job_test_prod
+  pool: 5
